@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { skills } from './shared/skills';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'RswApp';
+
+  public SkillHeaders(): string[] {
+    return skills.map(x => x.header);
+  } 
 }

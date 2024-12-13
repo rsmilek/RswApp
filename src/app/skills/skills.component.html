@@ -1,0 +1,27 @@
+
+<p>{{header}}</p>
+
+<div class="container resume-section skills">
+
+        <div class="article-subtitle header" #headerElementRef>
+            {{Header()}}
+        </div>
+        
+        <div class="icons-container">
+            @for (iconFullFileName of IconFullFileNames(); track $index)
+            {
+                <div class="icon-wrapper">
+                    <div class="icon-box">
+                        <div class="image" #iconElementRef>
+                            <!-- <img src="{{iconFullFileName}}"> -->
+                            <img [src]="iconFullFileName">
+                        </div>
+                        <div class="title" #iconTitleElementRef>
+                            icon.title
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+
+</div>
